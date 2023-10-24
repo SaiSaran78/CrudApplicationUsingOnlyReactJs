@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Employees from "../Employee/Employees";
 import { Button, Form } from "react-bootstrap";
 import { v4 as uuid } from "uuid";
-import './Add.css';
+import "./Add.css";
 
 const Add = () => {
   const [Name, setName] = useState("");
@@ -38,7 +38,13 @@ const Add = () => {
     const Mark = marksRef.current.value;
     const MarkWithPercentage = `${Mark}%`;
 
-    Employees.push({ id: uniqueId, Id: ids, Name: Named, Age: Aged, Marks: MarkWithPercentage });
+    Employees.push({
+      id: uniqueId,
+      Id: ids,
+      Name: Named,
+      Age: Aged,
+      Marks: MarkWithPercentage,
+    });
 
     Nav("/");
   };
@@ -78,12 +84,9 @@ const Add = () => {
             ref={marksRef}
           />
         </div>
-        <Button type="submit">
-          Submit
-        </Button>
+        <Button type="submit">Submit</Button>
       </Form>
     </div>
   );
 };
-
 export default Add;

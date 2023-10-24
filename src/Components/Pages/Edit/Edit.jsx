@@ -18,13 +18,13 @@ const Edit = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    var employee=Employees[index];
-    employee.Id=Id;
-    employee.Name=Named;
-    employee.Age=Aged;
-    employee.Marks=`${Mark}%`
-    // below code is using by if condition and const 
+
+    var employee = Employees[index];
+    employee.Id = Id;
+    employee.Name = Named;
+    employee.Age = Aged;
+    employee.Marks = `${Mark}%`;
+    // below code is using by if condition and const
     // const index = Employees.findIndex((e) => e.Id === Id);
     // if (index !== -1) {
     //   const updatedEmployee = {
@@ -40,13 +40,13 @@ const Edit = () => {
     Nav("/");
   };
 
-  useEffect(()=>{
-    setId(localStorage.getItem('Id'));
-    setName(localStorage.getItem('Name'));
-    setAge(localStorage.getItem('Age'))
-    setMarks(localStorage.getItem('Marks').replace('%', ''))
-  },[])
-  // below code is using tanking the const to store the value withgiven id 
+  useEffect(() => {
+    setId(localStorage.getItem("Id"));
+    setName(localStorage.getItem("Name"));
+    setAge(localStorage.getItem("Age"));
+    setMarks(localStorage.getItem("Marks").replace("%", ""));
+  }, []);
+  // below code is using tanking the const to store the value withgiven id
   // useEffect(() => {
   //   const storedId = localStorage.getItem('Id') || '';
   //   const storedName = localStorage.getItem('Name') || '';
@@ -102,9 +102,7 @@ const Edit = () => {
             // ref={marksRef}
           />
         </div>
-        <Button  type="submit">
-          Update
-        </Button>
+        <Button type="submit">Update</Button>
       </Form>
     </div>
   );

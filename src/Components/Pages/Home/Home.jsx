@@ -6,15 +6,14 @@ import { Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 const Home = () => {
-
   let Nav = useNavigate();
 
-  const handleEdit=(Id,Named,Aged,Mark)=>{
-    localStorage.setItem('Id',Id)
-    localStorage.setItem('Name',Named)
-    localStorage.setItem('Age',Aged)
-    localStorage.setItem('Marks',Mark)
-  }
+  const handleEdit = (Id, Named, Aged, Mark) => {
+    localStorage.setItem("Id", Id);
+    localStorage.setItem("Name", Named);
+    localStorage.setItem("Age", Aged);
+    localStorage.setItem("Marks", Mark);
+  };
 
   const handleDelete = (Id) => {
     var index = Employees.map(function (e) {
@@ -26,18 +25,17 @@ const Home = () => {
     Nav("/");
   };
 
-
   return (
     // <Fragment><div style={{margin:"10rem"}}> inbetween we want to write below html code</div></Fragment>
     <div>
       <div className="DashBoard">
         <h3>Crud DashBoard</h3>
       </div>
-    <div class="AddDeleteButtons">
-      <Link to = "Add ">
-        <Button className="AddNewEmp"> Add A New Employee</Button>
+      <div class="AddDeleteButtons">
+        <Link to="Add ">
+          <Button className="AddNewEmp"> Add A New Employee</Button>
         </Link>
-        </div>
+      </div>
       <div className="Table">
         {/* below lines from 38 to 84 is using by react bootstrap */}
         {/* <Table striped bordered hover size="sm">
@@ -116,12 +114,26 @@ const Home = () => {
                       {/* Below two lines are indiviual columns using React BootStrap */}
                       <td>
                         <Link to="Edit">
-                          <Button onClick={() => handleEdit(item.Id,item.Name,item.Age,item.Marks)}>Edit</Button>
+                          <Button
+                            onClick={() =>
+                              handleEdit(
+                                item.Id,
+                                item.Name,
+                                item.Age,
+                                item.Marks
+                              )
+                            }
+                          >
+                            Edit
+                          </Button>
                         </Link>
                       </td>
 
                       <td>
-                        <Button className="Delete" onClick={() => handleDelete(item.Id)}>
+                        <Button
+                          className="Delete"
+                          onClick={() => handleDelete(item.Id)}
+                        >
                           Delete
                         </Button>
                       </td>
