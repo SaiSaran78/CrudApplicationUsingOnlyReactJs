@@ -1,0 +1,25 @@
+.Add{
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    text-align: center;
+    margin-left: 30em;
+    margin-top: 10em;
+    position: fixed;
+}
+.GroupMarks{
+    box-shadow: 2px 3px 4px #5f9ea0;
+}
+.GroupAge{
+    box-shadow: 2px 3px 4px #5f9ea0;
+}
+.GroupName{
+    box-shadow: 2px 3px 4px #5f9ea0;
+}
+.GroupId{
+    box-shadow: 2px 3px 4px #5f9ea0;
+}

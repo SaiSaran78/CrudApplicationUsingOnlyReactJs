@@ -1,0 +1,113 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+body {
+  background-color: white;
+  width: 98%;
+}
+.DashBoard {
+  background-color: rgb(11, 22, 17);
+  width: 102%;
+  height: 70px;
+  color: #5f9ea0;
+  line-height: 35px;
+  border-radius: 5px;
+  margin-top: 1px;
+}
+h3 {
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  line-height: 60px;
+  margin-left: 15px;
+}
+.Table {
+  display: table;
+  text-align: center;
+  padding-left: 13px;
+  /* padding: 1em; */
+  margin-left: 50px;
+}
+.table,
+.table th,
+.table td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  height: 40px;
+}
+table {
+  width: 1000px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  height: 40px;
+  margin: 50px 15em;
+}
+.AddDeleteButtons {
+  display: flex;
+  gap: -1.5rem;
+}
+.AddNewEmp {
+  background-color: black;
+  width: 151px;
+  height: 35px;
+  color: white;
+  font-size: 13px;
+  margin-top: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.DeleteAllTables {
+  background-color: black;
+  width: 135px;
+  height: 35px;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+/* Media Query for Tablet (768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .DashBoard {
+    width: 100%;
+  }
+  table {
+    width: 100%;
+    margin: 10px;
+  }
+  .AddDeleteButtons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .AddANewStudent,
+  .DeleteAllTables {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Media Query for Mobile (480px) */
+@media screen and (max-width: 480px) {
+  .DashBoard {
+    height: 50px;
+    line-height: 25px;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 40px;
+    margin-left: 10px;
+  }
+  .Table {
+    padding-left: 5px;
+  }
+  .table,
+  .table th,
+  .table td {
+    height: 30px;
+  }
+}
+.Delete{
+    background-color: #ff0000;
+}
