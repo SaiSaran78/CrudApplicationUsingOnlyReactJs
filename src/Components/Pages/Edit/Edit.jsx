@@ -12,30 +12,30 @@ const Edit = () => {
   const [Mark, setMarks] = useState("");
 
   let Nav = useNavigate();
-  var index = Employees.map(function (e) {
-    return e.Id;
-  }).indexOf(Id); //indexOf(Id) is used to get that particular employee Id
+  // var index = Employees.map(function (e) {
+  //   return e.Id;
+  // }).indexOf(Id); //indexOf(Id) is used to get that particular employee Id
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    var employee = Employees[index];
-    employee.Id = Id;
-    employee.Name = Named;
-    employee.Age = Aged;
-    employee.Marks = `${Mark}%`;
+    // var employee = Employees[index];
+    // employee.Id = Id;
+    // employee.Name = Named;
+    // employee.Age = Aged;
+    // employee.Marks = `${Mark}%`;
     // below code is using by if condition and const
-    // const index = Employees.findIndex((e) => e.Id === Id);
-    // if (index !== -1) {
-    //   const updatedEmployee = {
-    //     Id: Id,
-    //     Name: Named,
-    //     Age: Aged,
-    //     Marks: `${Mark}%`,
-    //   };
+    const index = Employees.findIndex((e) => e.Id === Id);
+    if (index !== -1) {
+      const updatedEmployee = {
+        Id: Id,
+        Name: Named,
+        Age: Aged,
+        Marks: `${Mark}%`,
+      };
 
-    //   Employees[index] = updatedEmployee; // Updating the particular employee
-    // }
+      Employees[index] = updatedEmployee; // Updating the particular employee
+    }
 
     Nav("/");
   };
