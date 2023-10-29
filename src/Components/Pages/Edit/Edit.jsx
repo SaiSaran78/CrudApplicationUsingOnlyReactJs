@@ -67,7 +67,7 @@ const Edit = () => {
             type="number"
             placeholder="Enter the Employee Id"
             value={Id}
-            onChange={(e) => setId(e.target.value)}
+            onChange={(e) => setId(e.target.value)} //to change the old data to new data
             required
             // ref={idRef} // Attach the ref to the input
           />
@@ -77,7 +77,7 @@ const Edit = () => {
             type="text"
             placeholder="Enter the Employee Name"
             value={Named}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setName(e.target.value)} //to change the old data to new data
             required
             // ref={nameRef}
           />
@@ -87,7 +87,7 @@ const Edit = () => {
             type="Number"
             placeholder="Enter the Employee Age"
             value={Aged}
-            onChange={(e) => setAge(e.target.value)}
+            onChange={(e) => setAge(e.target.value)} //to change the old data to new data
             required
             // ref={ageRef}
           />
@@ -97,7 +97,7 @@ const Edit = () => {
             type="Number"
             placeholder="Enter the Employee Marks"
             value={Mark}
-            onChange={(e) => setMarks(e.target.value)}
+            onChange={(e) => setMarks(e.target.value)} //to change the old data to new data
             required
             // ref={marksRef}
           />
