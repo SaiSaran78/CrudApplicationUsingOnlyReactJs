@@ -9,7 +9,7 @@ import "./Add.css";
 const Add = () => {
   const [Name, setName] = useState("");
   const [Age, setAge] = useState("");
-  const [Marks, setMarks] = useState("");
+  const [Attendance, setAttendance] = useState("");
 
   let Nav = useNavigate();
 
@@ -17,14 +17,14 @@ const Add = () => {
   const idRef = useRef(null);
   const nameRef = useRef(null);
   const ageRef = useRef(null);
-  const marksRef = useRef(null);
+  const AttendanceRef = useRef(null);
 
   useEffect(() => {
     // Clear input fields after navigation
     idRef.current.value = "";
     nameRef.current.value = "";
     ageRef.current.value = "";
-    marksRef.current.value = "";
+    AttendanceRef.current.value = "";
   }, []);
 
   const handleSubmit = (e) => {
@@ -35,15 +35,15 @@ const Add = () => {
     const ids = idRef.current.value;
     const Named = nameRef.current.value;
     const Aged = ageRef.current.value;
-    const Mark = marksRef.current.value;
-    const MarkWithPercentage = `${Mark}%`;
+    const Attendance = AttendanceRef.current.value;
+    const AttendanceWithPercentage = `${Attendance}%`;
 
     Employees.push({
       id: uniqueId,
       Id: ids,
       Name: Named,
       Age: Aged,
-      Marks: MarkWithPercentage,
+      Attendance: AttendanceWithPercentage,
     });
 
     Nav("/");
@@ -79,9 +79,9 @@ const Add = () => {
         <div className="GroupMarks" id="formMarks">
           <Form.Control
             type="Number"
-            placeholder="Enter the Employee Marks"
+            placeholder="Enter the Employee Attendance"
             required
-            ref={marksRef}
+            ref={AttendanceRef}
           />
         </div>
         <Button type="submit">Submit</Button>

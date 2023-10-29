@@ -9,7 +9,7 @@ const Edit = () => {
   const [Id, setId] = useState("");
   const [Named, setName] = useState("");
   const [Aged, setAge] = useState("");
-  const [Mark, setMarks] = useState("");
+  const [Attendance, setAttendance] = useState("");
 
   let Nav = useNavigate();
   // var index = Employees.map(function (e) {
@@ -23,7 +23,7 @@ const Edit = () => {
     // employee.Id = Id;
     // employee.Name = Named;
     // employee.Age = Aged;
-    // employee.Marks = `${Mark}%`;
+    // employee.Attendance = `${Attendance}%`;
     // below code is using by if condition and const
     const index = Employees.findIndex((e) => e.Id === Id);
     if (index !== -1) {
@@ -31,7 +31,7 @@ const Edit = () => {
         Id: Id,
         Name: Named,
         Age: Aged,
-        Marks: `${Mark}%`,
+        Attendance: `${Attendance}%`,
       };
 
       Employees[index] = updatedEmployee; // Updating the particular employee
@@ -44,20 +44,20 @@ const Edit = () => {
     setId(localStorage.getItem("Id"));
     setName(localStorage.getItem("Name"));
     setAge(localStorage.getItem("Age"));
-    setMarks(localStorage.getItem("Marks").replace("%", ""));
+    setAttendance(localStorage.getItem("Attendance").replace("%", ""));
   }, []);
   // below code is using tanking the const to store the value withgiven id
   // useEffect(() => {
   //   const storedId = localStorage.getItem('Id') || '';
   //   const storedName = localStorage.getItem('Name') || '';
   //   const storedAge = localStorage.getItem('Age') || '';
-  //   const storedMarks = localStorage.getItem('Marks') || '';
+  //   const storedAttendance = localStorage.getItem('Attendance') || '';
 
   //   // Remove the percentage sign before setting the state
   //   setId(storedId);
   //   setName(storedName);
   //   setAge(storedAge);
-  //   setMarks(storedMarks.replace('%', ''));
+  //   setAttendance(storedAttendance.replace('%', ''));
   // }, []);
   return (
     <div>
@@ -96,8 +96,8 @@ const Edit = () => {
           <Form.Control
             type="Number"
             placeholder="Enter the Employee Marks"
-            value={Mark}
-            onChange={(e) => setMarks(e.target.value)} //to change the old data to new data
+            value={Attendance}
+            onChange={(e) => setAttendance(e.target.value)} //to change the old data to new data
             required
             // ref={marksRef}
           />

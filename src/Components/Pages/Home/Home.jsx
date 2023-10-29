@@ -8,11 +8,11 @@ import "./Home.css";
 const Home = () => {
   let Nav = useNavigate();
 
-  const handleEdit = (Id, Named, Aged, Mark) => {
+  const handleEdit = (Id, Named, Aged, Attendance) => {
     localStorage.setItem("Id", Id);
     localStorage.setItem("Name", Named);
     localStorage.setItem("Age", Aged);
-    localStorage.setItem("Marks", Mark);
+    localStorage.setItem("Attendance", Attendance);
   };
 
   const handleDelete = (Id) => {
@@ -45,7 +45,7 @@ const Home = () => {
               <th>Name</th>
               <th>Age</th>
               <th>Subject</th>
-              <th>Marks</th>
+              <th>Attendance</th>
               below action line is used to combined both edit and delete
               <th>Action</th>
               below edit and delete individual
@@ -70,7 +70,7 @@ const Home = () => {
                       {item.Age}
                     </td>
                     <td>
-                      {item.Marks}
+                      {item.Attendance}
                     </td>
                     // below two lines are combined lines using React BootStrap
                     <td>
@@ -95,7 +95,7 @@ const Home = () => {
               <th>Id</th>
               <th>Name</th>
               <th>Age</th>
-              <th>Marks</th>
+              <th>Attendance</th>
               {/* below action line is used to combined both edit and delete */}
               {/* <th>Action</th> */}
               <th>Edit</th>
@@ -110,7 +110,7 @@ const Home = () => {
                       <td>{item.Id}</td>
                       <td>{item.Name}</td>
                       <td>{item.Age}</td>
-                      <td>{item.Marks}</td>
+                      <td>{item.Attendance}</td>
                       {/* Below two lines are indiviual columns using React BootStrap */}
                       <td>
                         <Link to="Edit">
@@ -120,7 +120,7 @@ const Home = () => {
                                 item.Id,
                                 item.Name,
                                 item.Age,
-                                item.Marks
+                                item.Attendance
                               )
                             }
                           >
